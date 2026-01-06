@@ -1,6 +1,6 @@
 package com.niranjan.transport.service.impl;
 
-import com.niranjan.transport.dto.MonthlyProfitLossDto;
+import com.niranjan.transport.dto.MonthlyProfitLossDTO;
 import com.niranjan.transport.entity.DriverPayment;
 import com.niranjan.transport.entity.DriverPaymentType;
 import com.niranjan.transport.entity.Expense;
@@ -41,7 +41,7 @@ public class ReportServiceImpl implements ReportService {
     }
 
     @Override
-    public MonthlyProfitLossDto getMonthlyProfitLoss(int year, int month) {
+    public MonthlyProfitLossDTO getMonthlyProfitLoss(int year, int month) {
 
         LocalDate start = LocalDate.of(year, month, 1);
         LocalDate end = start.withDayOfMonth(start.lengthOfMonth());
@@ -81,7 +81,7 @@ public class ReportServiceImpl implements ReportService {
                 .map(Expense::getAmount)
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
 
-        return new MonthlyProfitLossDto(
+        return new MonthlyProfitLossDTO(
                 year,
                 month,
                 studentIncome,

@@ -1,8 +1,8 @@
 package com.niranjan.transport.service;
 
-import com.niranjan.transport.dto.MonthlyProfitLossDto;
+import com.niranjan.transport.dto.MonthlyProfitLossDTO;
 
 public interface ReportService {
 
-    MonthlyProfitLossDto getMonthlyProfitLoss(int year, int month);
+    MonthlyProfitLossDTO getMonthlyProfitLoss(int year, int month);
 }

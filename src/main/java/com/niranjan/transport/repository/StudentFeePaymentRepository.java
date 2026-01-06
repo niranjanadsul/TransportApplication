@@ -11,4 +11,6 @@ public interface StudentFeePaymentRepository
         extends JpaRepository<StudentFeePayment, Long> {
 
     List<StudentFeePayment> findByStudentAndFeeMonth(Student student, LocalDate feeMonth);
+    List<StudentFeePayment> findByStudent(Student student);
+
 }

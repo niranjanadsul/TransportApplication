@@ -2,7 +2,7 @@ package com.niranjan.transport.dto;
 
 import java.math.BigDecimal;
 
-public class MonthlyProfitLossDto {
+public class MonthlyProfitLossDTO {
 
     private int year;
     private int month;
@@ -12,7 +12,7 @@ public class MonthlyProfitLossDto {
     private BigDecimal driverExpense;
     private BigDecimal vehicleExpense;
 
-    public MonthlyProfitLossDto(
+    public MonthlyProfitLossDTO(
             int year,
             int month,
             BigDecimal studentIncome,
